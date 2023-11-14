@@ -1,7 +1,7 @@
-## Resfulapi
-# Installaion
+# Resfulapi
+## Installaion
 `npm i`
-# File path.
+## File path.
 \RESFULAPI\
 ├── .gitignore\
 ├── package-lock.json\
