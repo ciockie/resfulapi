@@ -56,44 +56,7 @@ interface RouteDefinition {
     ) => void;
 }
 
-//bot config db
-interface Behavior {
-    behavior: string;
-    icon: string;
-}
-
-interface Commands {
-    name: string;
-    status: boolean;
-    description: string;
-}
-
-interface BotConfigData {
-    behaviors: Behavior[];
-    commands: Commands[];
-}
-
-// id card
-type Bit = 0 | 1;
-
 interface CommandResponse {
     status: boolean;
     message: string;
-}
-
-//bot config page & api
-interface Behavior {
-    behavior: string;
-    icon: string;
-}
-
-interface Commands {
-    name: string;
-    status: boolean;
-    description: string;
-}
-
-interface BotConfigData {
-    behaviorsIncluded: Behavior[];
-    commands: Commands[];
 }
