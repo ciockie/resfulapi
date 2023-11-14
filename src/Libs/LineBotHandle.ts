@@ -1,10 +1,10 @@
 import { LineConfig, Message, LineBotHandlerInterface } from "@/Types";
 import { Client, middleware } from "@line/bot-sdk";
+import { channelAccessToken as ca, channelSecret as cs } from "@/Libs/Conf";
 
 class LineBotHandler implements LineBotHandlerInterface {
-    static channelAccessToken =
-        "6802tp9969C+T1fCjJEdVwLTbkIKFcsVdYgJ1arlUTaEqFUu38px0LS57vGPNopEOqYZHhJLXd/b1H7vMCiB1kAio5u8xaygeJ0J2L6xx/EBwwKbGKvQv3Yg73wFMJg/HomzXjbhVk/MBTfCmeZEGwdB04t89/1O/w1cDnyilFU=";
-    static channelSecret = "59ebc86f4197296b251c543b167f164b";
+    static channelAccessToken = ca;
+    static channelSecret = cs;
 
     private client: Client;
     private config: LineConfig;
@@ -75,7 +75,7 @@ class LineBotHandler implements LineBotHandlerInterface {
         try {
             const response = await this.client.getGroupMemberProfile(
                 groupId,
-                "all"
+                "all",
             );
             return response;
         } catch (error: any) {

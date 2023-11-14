@@ -67,3 +67,9 @@ class MSSQLCrud {
 }
 
 export default MSSQLCrud;
+
+// example
+// import MSSQLCrud from "@/Libs/MSSQL";
+// const crud = new MSSQLCrud();
+// const result = await crud.read("SELECT * FROM table");
+// console.log(result);

@@ -77,3 +77,9 @@ export class MongoDBCrud {
         }
     }
 }
+
+// example
+// import MongoDBCrud from "@/Libs/Mongo";
+// const crud = new MongoDBCrud("collectionName");
+// const result = await crud.read("SELECT * FROM table");
+// console.log(result);
