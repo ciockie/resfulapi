@@ -1,13 +1,13 @@
 import { Express, Request, Response } from "express";
 import type { RouteDefinition } from "@/Types";
 
-const GetLogs: RouteDefinition = {
+const ListUsers: RouteDefinition = {
     HTTPName: "list users",
     method: "get",
     path: "/users",
     RouteDescription: "get",
     execute: (app: Express) => {
-        app.get(GetLogs.path, (req: Request, res: Response) => {
+        app.get(ListUsers.path, (req: Request, res: Response) => {
             const users = [
                 {
                     name: "John",
@@ -23,4 +23,4 @@ const GetLogs: RouteDefinition = {
     },
 };
 
-export default GetLogs;
+export default ListUsers;
